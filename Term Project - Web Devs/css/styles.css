@@ -1,0 +1,120 @@
+/* Web Dev. -Group Project */
+/* styles for the body */
+body {
+  /* background-color: #FFFF99; */
+  background-color: #ffffff;
+  color: #000;
+} 
+
+img {
+  max-width: 100%;
+}
+
+/* styles for the container id */
+#container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  color: #000;
+}
+
+header {
+  margin-top: 0.1em;
+  background-color: white; 
+  text-align: center;
+  color: #390000;
+}
+
+nav {
+  background-color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.25em;
+  font-weight: bold;
+  text-align: center;
+  margin-top: -1.5em;
+  color: #390000;
+}
+
+/* styles regarding ul iinside nav */
+nav ul {
+  padding: 0;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+/* styles for the li in the ul in the nav */
+nav li {
+  background-color: #ffffff;
+  margin: 0.3em;
+  padding: 0.4em;
+  border-radius: 2em;
+  list-style-type: none;
+  color: #390000;
+}
+
+/* styles for the anchor elements inside the li inside nav */
+nav li a {
+  color: #fff;
+  text-decoration: none;
+  color: #390000;
+}
+
+/* styles to display mobile class */
+.mobile {
+  display: inline;
+}
+
+/* styles to hide the desktop class */
+.desktop {
+  display: none;
+}
+
+main {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1em;
+  margin-top: 0.5em;
+  padding: 1em;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+footer {
+  font-size: .7em;
+  text-align: center;
+  margin-top: 2em;
+  color: #fff;
+}
+
+/* style for the links inside main */
+main a {
+  border-radius: 1em;
+  color: #000000;
+  font-weight: bold;
+  padding: 0.5em;
+  background-color: #ffffff;
+  text-decoration: none;
+}
+
+/* style for the links in the footer */
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* styles for the tablet class */
+.tablet {
+  display: none;
+}
+
+.equip {
+  /* float: left;
+  padding: 0 20px 20px; */
+  display: none;
+}
+
+/* style for the aside element */
+aside {
+  font-style: italic;
+}
+
