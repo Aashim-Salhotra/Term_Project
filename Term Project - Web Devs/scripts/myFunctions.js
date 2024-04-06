@@ -11,4 +11,15 @@ function burpees() {
 	document.getElementById('video').play();
 }
 
+//Plank video window
+function plank() {
+	window.open("scripts/plank.html", "_blank", "width=610, height=360");
+	document.getElementById('video').play();
+}
+
+//Mountain climber video window
+function mtnClimber() {
+	window.open("scripts/mtn.html", "_blank", "width=610, height=360");
+	document.getElementById('video').play();
+}
 
