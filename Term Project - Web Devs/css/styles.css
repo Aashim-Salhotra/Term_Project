@@ -323,4 +323,20 @@ footer {
     color: #660;
   }
 
+  body {
+    background: #fff;
+  }
+
+  /* style for header of desktop view port */
+  header {
+    text-align: right;
+  }
+
+  /* style for the nav */
+  nav {
+    float: left;
+    margin-top: -7em;
+    width: 60%;
+  }
+
 }  
