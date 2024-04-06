@@ -294,4 +294,33 @@ footer {
     background-color: #ffffff;
   }
 
+    /* paragraphs inside main */
+  main p {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    color: #000000;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+
+  /* styles for the item class */
+  /*  styles for the links inside the nav*/
+  nav li a:link {
+    color: #ff0000;
+  }
+
+  nav li a:visited {
+    color: rgb(116, 0, 0);
+  }
+
+  nav li a:hover {
+    color: #ff0000;
+    text-shadow: 0em 0em 0.3em#ff00008b;
+  }
+
+  nav li a:active {
+    color: #660;
+  }
+
 }  
