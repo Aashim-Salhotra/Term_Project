@@ -253,3 +253,21 @@ footer {
     text-decoration: underline;
   }
   
+  /* media query for the desktop view port */
+@media only screen and (min-width: 900px) {
+
+    /* style for the container id */
+    #container {
+      /* width: 80%; */
+      background-color: #ffffff;
+    }
+  
+    /* styles for the ul inside the nav */
+    nav ul {
+      margin: 0;
+      padding-left: 0.5%;
+      padding-right: 0.5%;
+    }
+
+    
+}  
