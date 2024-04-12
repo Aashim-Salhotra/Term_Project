@@ -27,3 +27,63 @@ header {
   text-align: center;
   color: #ff00ff; /* Neon pink text */
 }
+
+nav {
+    background-color: #2a0038; /* Dark purple background */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.25em;
+    font-weight: bold;
+    text-align: center;
+    margin-top: -1.5em;
+    color: #ff00ff; /* Neon pink text */
+  }
+  
+  /* Styles regarding ul inside nav */
+  nav ul {
+    padding: 0;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+  
+  /* Styles for the li in the ul in the nav */
+  nav li {
+    background-color: #4e005f; /* Dark purple background with a neon tint */
+    margin: 0.3em;
+    padding: 0.4em;
+    border-radius: 2em;
+    list-style-type: none;
+    color: #ff00ff; /* Neon pink text */
+  }
+  
+  /* Styles for the anchor elements inside the li inside nav */
+  nav li a {
+    color: #ffffff; /* White text */
+    text-decoration: none;
+    color: #ff00ff; /* Neon pink text */
+  }
+  
+  /* Styles to display mobile class */
+  .mobile {
+    display: inline;
+  }
+  
+  /* Styles to hide the desktop class */
+  .desktop {
+    display: none;
+  }
+  
+  main {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+    margin-top: 0.5em;
+    padding: 1em;
+    background-color: #2a0038; /* Dark purple background */
+    color: #ffffff; /* White text */
+  }
+  
+  footer {
+    font-size: .7em;
+    text-align: center;
+    margin-top: 2em;
+    color: #ffffff; /* White text */
+  }
