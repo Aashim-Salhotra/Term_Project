@@ -1,0 +1,29 @@
+/* Stylesheet for the INFINITY GAMES web pages with a purple neon theme */
+
+/* Styles for the body */
+body {
+  background-color: #2a0038; /* Dark purple background */
+  color: #ffffff; /* White text */
+} 
+
+img {
+  max-width: 100%;
+}
+
+/* Styles for mobile layout */
+
+/* Styles for the container id */
+#container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #2a0038; /* Dark purple background */
+  color: #ffffff; /* White text */
+}
+
+header {
+  margin-top: 0.1em;
+  background-color: #2a0038; /* Dark purple background */
+  text-align: center;
+  color: #ff00ff; /* Neon pink text */
+}
