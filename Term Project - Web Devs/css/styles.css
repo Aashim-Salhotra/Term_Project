@@ -340,3 +340,265 @@ footer {
   }
 
 }  
+
+/* media query for the tablet */
+@media only screen and (min-width: 700px) {
+
+  /* styles for li inside nav */
+  nav li {
+    display: inline;
+    float: left;
+    margin-left: 1%;
+    margin-right: 1%;
+    padding-left: 0;
+    padding-right: 0;
+    width: 18%;
+    white-space: nowrap;
+    border-radius: 0;
+    background-color: transparent;
+  }
+
+  /* styles for the main element */
+  main {
+    clear: left;
+    /* margin-top: 4em; */
+    border-radius: 0;
+    margin-top: -0.3em;
+    overflow: auto;
+  }
+
+  /*  hiding mobile class*/
+  .mobile {
+    display: none;
+  }
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+
+  /* display desktop class */
+  .desktop {
+    display: block;
+  }
+
+  /* display equip class img/content */
+  .equip {
+    display: inline;
+    float: left;
+    margin-right: 1.5em;
+  }
+
+  h1 {
+    clear: left;
+    /* text-align: center; */
+  }
+
+  /* style fot the images inside figure */
+  figure img {
+    color: #000;
+    background-color: #ffffff;
+    display: inline;
+    height: 8em;
+    width: calc(100% / 3 - 5%);
+    /* width: 28%; */
+    margin: 1%;
+    padding: 1%;
+  }
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+
+  /* style for the links inside the figure */
+  figure a {
+    background-color: transparent;
+    padding: 0;
+    text-decoration: none;
+  }
+
+  /* display items class */
+  .items {
+    display: block;
+    list-style-position: inside;
+    /* margin-bottom: 6em; */
+  }
+
+  /* display class tablet */
+  .tablet {
+    display: block;
+    margin-top: -3em;
+    margin-bottom: -1em;
+  }
+
+  dt {
+    font-weight: bold;
+    margin-top: 0.7em;
+  }
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+
+  section {
+    padding-bottom: 3em;
+  }
+
+  /* style for the h1 inside the section element */
+  section h1 {
+    text-align: left;
+  }
+
+  /* style regarding links inside the section element */
+  section a {
+    padding: 0;
+    background-color: transparent;
+    color: #1d1d1c;
+    font-weight: normal;
+    text-decoration: underline;
+  }
+
+  /* style for the contact class */
+  .contact {
+    background-color: transparent;
+    color: #1d1d1c;
+    padding: 0;
+    text-decoration: underline;
+    font-weight: normal;
+  }
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+
+  /* style for the article element */
+  article {
+    background-color: #ffffff;
+    float: left;
+    margin: 0.5%;
+    padding: 0.5%;
+    /* width: 31%; */
+    width: calc((100% - 6%) / 3);
+    text-align: left;
+    border-radius: 1em;
+  }
+
+  article h2 {
+    margin-left: 1em;
+  }
+
+  /* style for the images inside the articles in main */
+  article img {
+    border: solid 0.1em #ffffff;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* style for the p inside the articles */
+  article p {
+    margin-top: 2%;
+    padding: 1%;
+  }
+
+  /* style for aside element */
+  aside {
+    background-color: #fff;
+    border-radius: 0 5em 5em 5em;
+    box-shadow: 1em 1em 1em #ffffff;
+    padding: 1.5em;
+    margin: 1em;
+  }
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+
+  fieldset {
+    border: groove;
+    border-radius: 0.5em;
+    box-shadow: 0.3em 0.3em 0.7em rgba(20, 0, 0, 0.54);
+    background-color: #cecece;
+  }
+
+  fieldset legend {
+    visibility: visible;
+  }
+
+  /* style for the label */
+  label {
+    float: left;
+    padding-right: 0.5em;
+    text-align: right;
+    width: 10em;
+  }
+
+  form ul {
+    text-align: left;
+  }
+
+  .gender p {
+    width: 10em;
+    text-align: right;
+  }
+
+  /* style for the btn class */
+  #form-btn:first-of-type {
+    margin-left: 10em;
+  }
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+
+  form p>small {
+    display: inline;
+    padding-left: 1em;
+  }
+
+  .gender {
+    flex-direction: row;
+  }
+
+  .gender>div {
+    flex-direction: row;
+    margin-left: 0;
+  }
+
+  /* style for the table element */
+  table {
+    border: 0.1em solid #ffffff;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    text-align: center;
+  }
+
+  /* style for the th and tr */
+  th,
+  tr,
+  td {
+    border: 0.1em solid #000;
+    padding: 1em;
+  }
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+
+  /* style for th */
+  th {
+    background-color: #ffffff;
+    color: #000000;
+  }
+
+  /* style for the caption of the table */
+  caption {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding-bottom: 0.5em;
+  }
+
+  /* styel for the video class */
+  .video {
+    text-align: center;
+    padding: 1em;
+  }
+
+  video {
+    border: 0.5em ridge #fff;
+    height: auto;
+    max-width: 100%;
+  }
+
+  /* style for the copyright id div */
+  #copyright {
+    float: left;
+    margin-top: 2em;
+    width: 80%;
+  }
+
+  #social {
+    float: right;
+    width: 20%;
+  }
+
+}
