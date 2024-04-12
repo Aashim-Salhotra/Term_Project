@@ -340,3 +340,41 @@ footer {
   }
 
 }  
+
+  /* styles regarding section element */
+  section {
+    color: #000000;
+    margin-left: 1em;
+    padding-bottom: 5em;
+    margin-top: 2em;
+  }
+
+  section:first-of-type {
+    margin-top: 0;
+  }
+
+  section a {
+    color: #000000;
+  }
+
+  section p {
+    margin-left: 0;
+  }
+
+  main h2 {
+    color: #000000;
+  }
+
+  .contact {
+    color: #000000;
+  }
+
+  /* style for the h2 inside the article */
+  main article h2 {
+    color: #000;
+    text-align: center;
+  }
+
+  article p {
+    color: #000;
+  }
