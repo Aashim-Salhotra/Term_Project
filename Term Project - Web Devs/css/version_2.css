@@ -87,3 +87,63 @@ nav {
     margin-top: 2em;
     color: #ffffff; /* White text */
   }
+
+  /* Styles for the links inside main */
+main a {
+  border-radius: 1em;
+  color: #ffffff; /* White text */
+  font-weight: bold;
+  padding: 0.5em;
+  background-color: #4e005f; /* Dark purple background with a neon tint */
+  text-decoration: none;
+}
+
+/* Styles for the links in the footer */
+footer a {
+  color: #ffffff; /* White text */
+  text-decoration: none;
+}
+
+/* Styles for the tablet class */
+.tablet {
+  display: none;
+}
+
+.equip {
+  display: none;
+}
+
+/* Style for the aside element */
+aside {
+  font-style: italic;
+}
+
+/* Style for input, textarea, etc. */
+input,
+select,
+textarea {
+  display: block;
+  margin-bottom: 1em;
+  border-radius: 0.3em;
+}
+
+/* Style for the label */
+label {
+  display: block;
+}
+
+/* Style for the ul inside the form */
+form ul {
+  list-style-type: none;
+}
+
+.chkbx {
+  display: inline-block;
+}
+
+.hero-section{
+  align-items: center;
+  display: flex;
+  min-height: 90vh;
+  justify-content: center;
+}
