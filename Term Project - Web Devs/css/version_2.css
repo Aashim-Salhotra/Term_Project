@@ -349,3 +349,93 @@ form p>small {
   section {
     padding-bottom: 3em;
   }
+
+  
+  section h1 {
+    text-align: left;
+  }
+
+  section a {
+    padding: 0;
+    background-color: transparent;
+    color: #1d1d1c;
+    font-weight: normal;
+    text-decoration: underline;
+  }
+
+  .contact {
+    background-color: transparent;
+    color: #1d1d1c;
+    padding: 0;
+    text-decoration: underline;
+    font-weight: normal;
+  }
+
+  article {
+    background-color: #ffffff;
+    float: left;
+    margin: 0.5%;
+    padding: 0.5%;
+    width: calc((100% - 6%) / 3);
+    text-align: left;
+    border-radius: 1em;
+  }
+
+  article h2 {
+    margin-left: 1em;
+  }
+
+  article img {
+    border: solid 0.1em #ffffff;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  article p {
+    margin-top: 2%;
+    padding: 1%;
+  }
+
+  aside {
+    background-color: #fff;
+    border-radius: 0 5em 5em 5em;
+    box-shadow: 1em 1em 1em #ffffff;
+    padding: 1.5em;
+    margin: 1em;
+  }
+
+  fieldset {
+    border: groove;
+    border-radius: 0.5em;
+    box-shadow: 0.3em 0.3em 0.7em rgba(20, 0, 0, 0.54);
+    background-color: #cecece;
+  }
+
+  fieldset legend {
+    visibility: visible;
+  }
+
+  label {
+    float: left;
+    padding-right: 0.5em;
+    text-align: right;
+    width: 10em;
+  }
+
+  form ul {
+    text-align: left;
+  }
+
+  .gender p {
+    width: 10em;
+    text-align: right;
+  }
+
+  .gender {
+    flex-direction: row;
+  }
+
+  .gender>div {
+    flex-direction: row;
+    margin-left: 0;
+  }
