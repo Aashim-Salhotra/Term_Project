@@ -309,3 +309,43 @@ form p>small {
     float: left;
     margin-right: 1.5em;
   }
+
+  
+  h1 {
+    clear: left;
+  }
+
+  figure img {
+    color: #ffffff; /* White text */
+    background-color: #4e005f; /* Dark purple background with a neon tint */
+    display: inline;
+    height: 8em;
+    width: calc(100% / 3 - 5%);
+    margin: 1%;
+    padding: 1%;
+  }
+
+  figure a {
+    background-color: transparent;
+    padding: 0;
+    text-decoration: none;
+  }
+
+  .items {
+    display: block;
+  }
+
+  .tablet {
+    display: block;
+    margin-top: -3em;
+    margin-bottom: -1em;
+  }
+
+  dt {
+    font-weight: bold;
+    margin-top: 0.7em;
+  }
+
+  section {
+    padding-bottom: 3em;
+  }
