@@ -493,3 +493,55 @@ form p>small {
     width: 20%;
   }
 }
+
+
+
+
+@media only screen and (min-width: 900px) {
+  #container {
+    background-color: #2a0038; /* Dark purple background */
+  }
+
+  nav ul {
+    margin: 0;
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+  }
+
+  nav li {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+    width: 20%;
+  }
+
+  nav li a {
+    display: inline-block;
+    padding: 0.7em;
+  }
+
+  main {
+    box-shadow: 0.5em 0.5em 0.5em #ffffff;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    background-color: #2a0038; /* Dark purple background */
+  }
+
+  main p {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    color: #ffffff; /* White text */
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+
+  footer {
+    color: #ffffff; /* White text */
+    background-color: #520000; /* Dark red background */
+    margin-top: -0.2em;
+    overflow: auto;
+  }
+
+
+
