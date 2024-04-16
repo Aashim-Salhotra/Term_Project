@@ -545,3 +545,62 @@ form p>small {
 
 
 
+
+  section {
+    color: #ffffff; /* White text */
+    margin-left: 1em;
+    padding-bottom: 5em;
+    margin-top: 2em;
+  }
+
+  section a {
+    color: #ffffff; /* White text */
+  }
+
+  section p {
+    margin-left: 0;
+  }
+
+  main h2 {
+    color: #ffffff; /* White text */
+  }
+
+  .contact {
+    color: #ffffff; /* White text */
+  }
+
+  main article h2 {
+    color: #ffffff; /* White text */
+    text-align: center;
+  }
+
+  article p {
+    color: #ffffff; /* White text */
+  }
+
+  form {
+    background-color: #fff;
+    padding: 1em;
+    margin: 1em;
+  }
+
+  form p {
+    color: #ffffff; /* White text */
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+  }
+
+  table {
+    background-color: #fff;
+    width: 80%;
+  }
+
+  caption {
+    color: #ffffff; /* White text */
+  }
+
+  #social img {
+    padding: 0.5em;
+  }
+}
