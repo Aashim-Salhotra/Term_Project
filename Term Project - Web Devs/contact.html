@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<!-- this is a template for the web pages -->
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Infinity Games</title>
+  
+  <style>main {
+    background-color: white;
+    padding: 20px;
+  }
+  
+  h2 {
+    color: red;
+  }
+  
+  label {
+    color: black;
+  }
+  
+  input[type="tel"] {
+    display: inline-block;
+  }
+  
+  small {
+    color: red;
+  }
+  
+  #form-btn {
+    text-align: center;
+  }
+  
+  #submit,
+  #reset {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  #submit:hover,
+  #reset:hover {
+    background-color: red;
+    color: white;
+    box-shadow: 0em 0em 0.5em red;
+  }
+  
+  #reference {
+    color: black;
+  }
+  
+  iframe {
+    display: block;
+    margin: 0 auto;
+    border-radius: 0.5em;
+    box-shadow: 0em 0em 0.4em rgba(255, 0, 0, 0.285);
+  }
+  
+  .contact {
+    color: black;
+  }
+  
+  .mobile {
+    color: red;
+  }
+  
+  .desktop {
+    color: red;
+  }
+  </style>
+
+
+</head>
+
+<body>
+  <div id="container">
+    <!-- this is the area that is used for the website name and logo -->
+    <header>
+
+      <a href="index.html"><img src="images/Logo.png" alt="Infinity Games logo"></a>
+
+    </header>
+    <!-- the area used for the hyperlinks -->
+    <nav>
+      <ul>
+        <li><a href="index.html">Home </a></li>
+        <li><a href="about.html">About Us </a></li>
+        <li><a href="games.html">Games </a></li>
+        <li><a href="products.html">Products </a></li>
+        <li><a href="contact.html">Contact Us </a></li>
+        <li><a href="login.html">Log In</a></li>
+
+      </ul>
+    </nav>
+    <!-- the area used for the content of the page -->
+    <main>
+        <h2 style="color: black; text-align:center">Ready to get started?</h2>
+        <h2 style="color: black; text-align:center">Complete the form below to begin your free trial!</h2>
+        <form>
+          <fieldset>
+            <legend>Please fill the following form</legend>
+  
+            <label for="fName">First Name:</label>
+            <input type="text" name="fName" id="fName">
+            <label for="lName">Last Name:</label>
+            <input type="text" name="lName" id="lName">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email">
+  
+            <p>
+              <label for="phone">Phone Number:</label>
+              <input type="tel" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                style="display: inline-block;">
+              <small>Format: 123-456-7890</small>
+            </p>
+            <section class="gender">
+              <p>Type:</p>
+              <div class="gender"><input type="radio" name="gender" id="female" value="female" class="radio"><label
+                  for="female">Monthly</label></div>
+              <div class="gender"><input type="radio" name="gender" id="male" value="male" class="radio"><label
+                  for="male">Yearly</label></div>
+            </section>
+            <p>I woudl like to receive information about: </p>
+            <ul>
+              <li><input type="checkbox" name="grpft" value="grpft" class="chkbx" id="grpft">New Products
+              </li>
+              <li><input type="checkbox" name="prtrain" id="prtrain" value="prtrain" class="chkbx">Sales</li>
+              <li><input type="checkbox" name="nutr" id="nutr" value="nutr" class="chkbx">Site News</li>
+            </ul>
+            <label for="reference">Referal Source:</label>
+            <select name="reference" id="reference">
+              <option value="ad">GTA V</option>
+              <option value="friend">RDR 2</option>
+              <option value="google">Spider-Man</option>
+              <option value="social">Forza</option>
+              <option value="other" selected>Other</option>
+            </select>
+            <label for="question">Questions?</label>
+            <textarea name="question" id="question" cols="25" rows="3"></textarea>
+  
+            <div id="form-btn">
+              <input type="submit" id="submit" class="btn" value="Submit" onclick="tyAlert()">
+              <input type="reset" id="reset" class="btn" value="Reset">
+            </div>
+          </fieldset>
+        </form>
+        <p style="text-align: center;">We are located at: <br>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d46095.700379342525!2d-79.41233396530147!3d43.77324755411816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4d3bca1a3f78f%3A0x815365ed6c3b957e!2sLambton%20College%20In%20Toronto!5e0!3m2!1sen!2sca!4v1702239414268!5m2!1sen!2sca" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  
+        </p>
+  
+        <p style="text-align: center;">Phone Number: <br>
+          <a class="mobile" href="tel:0">(000)111-2222</a><span class="desktop">(000)111-2222</span> </p>
+        <p style="text-align: center;">Email Address: <br>
+          <a style="color: red;" class="contact" href="mailto:infinity@games.com">infinity@games.com</a></p>
+      </main>
+    <!-- the area for the footer content -->
+    <footer>
+        <div id="copyright">
+          <p><!-- &#169; copyright symbol html entity number -->
+            &copy; Copyright 2024. All Rights Reserved. <br>
+            Aashim, Jagraj, Nishant, Sujal</p>
+          </div>
+          <div id="social">
+          <p>Connect with us on</p>
+          <p><a href="#"><img src="images/fblogo.png" alt="facebook logo image"></a></p>
+          <p><a href="#"><img src="images/twitterlogo.png" alt="twitterlogo image"></a></p>
+        </div>
+      </footer>
+    </div>
+    <script src="script/myFunctions.js"></script>
+  </body>
+  
+  </html>          
