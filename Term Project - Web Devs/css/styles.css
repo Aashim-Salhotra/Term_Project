@@ -36,14 +36,14 @@ nav {
   color: #390000;
 }
 
-/* styles regarding ul iinside nav */
+/* styles regarding ul inside nav */
 nav ul {
   padding: 0;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
 }
 
-/* styles for the li in the ul in the nav */
+/* styles for li in ul in nav */
 nav li {
   background-color: #ffffff;
   margin: 0.3em;
@@ -53,7 +53,7 @@ nav li {
   color: #390000;
 }
 
-/* styles for the anchor elements inside the li inside nav */
+/* styles for anchor elements inside li inside nav */
 nav li a {
   color: #fff;
   text-decoration: none;
@@ -79,14 +79,7 @@ main {
   color: #000000;
 }
 
-footer {
-  font-size: .7em;
-  text-align: center;
-  margin-top: 2em;
-  color: #fff;
-}
-
-/* style for the links inside main */
+/* style for links inside main */
 main a {
   border-radius: 1em;
   color: #000000;
@@ -96,13 +89,13 @@ main a {
   text-decoration: none;
 }
 
-/* style for the links in the footer */
+/* style for links in footer */
 footer a {
   color: #fff;
   text-decoration: none;
 }
 
-/* styles for the tablet class */
+/* styles for tablet class */
 .tablet {
   display: none;
 }
@@ -113,7 +106,7 @@ footer a {
   display: none;
 }
 
-/* style for the aside element */
+/* style for aside element */
 aside {
   font-style: italic;
 }
@@ -656,7 +649,7 @@ footer a:hover {
     text-align: center;
   }
 
-  /* style for the th and tr */
+  /* style for th and tr */
   th,
   tr,
   td {
@@ -879,4 +872,31 @@ form p>small {
   flex-direction: row;
   margin-left: 5em;
 }
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  margin: 5px; /* Add some spacing between social media icons */
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 600px) {
+  footer {
+    padding: 10px; /* Reduce padding on smaller screens */
+  }
+}
+
 /*------------------------------------------------------------------------------------------------------------------------------*/

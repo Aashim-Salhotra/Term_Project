@@ -72,7 +72,7 @@
       <div id="copyright">
         <p><!-- &#169; copyright symbol html entity number -->
           &copy; Copyright 2024. All Rights Reserved. <br>
-          Aashim, Jagraj, Nishant, Sujal</p>
+          Aashim, Apil, Jagraj, Nishant, Sujal</p>
         </div>
         <div id="social">
         <p>Connect with us on</p>
@@ -81,6 +81,21 @@
       </div>
     </footer>
   </div>
+<script>
+  // JavaScript for products page
 
+  // Function to display a message when a product is clicked
+  function productClicked(productName) {
+    alert("You clicked on " + productName);
+  }
+  
+  // Add event listeners to each product card
+  document.querySelectorAll('.card').forEach(item => {
+    item.addEventListener('click', function() {
+      // Extract product name from the card content
+      const productName = this.querySelector('.card__heading').textContent;
+      productClicked(productName);
+    });
+  }); </script>
 </body>
 </html>

@@ -165,8 +165,8 @@
         <div id="copyright">
           <p><!-- &#169; copyright symbol html entity number -->
             &copy; Copyright 2024. All Rights Reserved. <br>
-            Aashim, Jagraj, Nishant, Sujal</p>
-          </div>
+            Aashim, Apil, Jagraj, Nishant, Sujal</p>
+            </div>
           <div id="social">
           <p>Connect with us on</p>
           <p><a href="#"><img src="images/fblogo.png" alt="facebook logo image"></a></p>
@@ -174,7 +174,25 @@
         </div>
       </footer>
     </div>
-    <script src="script/myFunctions.js"></script>
+    <script>
+  // Function to display a thank you alert
+  function tyAlert() {
+    alert("Thank you for submitting the form! We'll be in touch shortly.");
+  }
+
+  // Function for form validation
+  function validateForm() {
+    var email = document.getElementById("email").value;
+    var emailPattern = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+
+    if (!emailPattern.test(email)) {
+      alert("Please enter a valid email address.");
+      return false;
+    }
+    return true;
+  }
+</script>
+
   </body>
   
   </html>          
