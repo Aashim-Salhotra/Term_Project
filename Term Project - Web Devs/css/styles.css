@@ -118,158 +118,158 @@ aside {
   font-style: italic;
 }
 
-
 /* Product card styles */
 .product-card {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 20px;
-    margin: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.product-card h2 {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.product-card button {
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/* Adjustments for responsiveness */
+@media only screen and (max-width: 600px) {
+  .product-card {
+    width: 90%;
+    margin: 10px auto;
   }
+}
+
+.hero-section{
+  align-items: center;
+  display: flex;
+  min-height: 90vh;
+  justify-content: center;
+}
+
+.card-grid{
+  display: inline-flex;
+  grid-column-gap: 40px;
+}
+
+.card{
+  position: relative;
+  opacity: 50%;
+  width: 300px;
+  height: 450px;
+  transition: .2s ease-out;
+  border-radius: 20px;
+  background-image: linear-gradient(15deg, #390000 30%, #ff0000 100%); /* Red to gray gradient */
   
-  .product-card img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
+} 
+
+.card:hover{
+  box-shadow: 2px 30px 30px rgba(0,0,0,0.5);
+  opacity: 100%;
+  transform: scale(1.06) translateZ(0);
+
+}
+
+.card__background{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-size: cover;
+  background-position: center;
+  border-radius: 24px;
+  transform-origin: center;
+  transform: scale(1) translateZ(0);
+  transition: filter 200ms linear, transform 200ms linear;
+  filter: brightness(0.75) saturate(1.2) contrast(0.85);
+}
+
+.card__content{
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 24px;
   
-  .product-card h2 {
-    margin-top: 10px;
-    margin-bottom: 0;
-  }
-  
-  .product-card button {
-    margin-top: 10px;
-    cursor: pointer;
-  }
-  
-  /* Adjustments for responsiveness */
-  @media only screen and (max-width: 600px) {
-    .product-card {
-      width: 90%;
-      margin: 10px auto;
-    }
-  }
-  
-  .hero-section{
-    align-items: center;
-    display: flex;
-    min-height: 90vh;
-    justify-content: center;
-  }
-  
-  .card-grid{
-    display: inline-flex;
-    grid-column-gap: 40px;
-  }
-  
-  .card{
-    position: relative;
-    opacity: 50%;
-    width: 300px;
-    height: 450px;
-    transition: .2s ease-out;
-    border-radius: 20px;
-    background-image: linear-gradient(15deg, #390000 30%, #ff0000 100%); /* Red to gray gradient */
-    
-  } 
-  
-  .card:hover{
-    box-shadow: 2px 30px 30px rgba(0,0,0,0.5);
-    opacity: 100%;
-    transform: scale(1.06) translateZ(0);
-  
-  }
-  
-  .card__background{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: 0;
-    background-size: cover;
-    background-position: center;
-    border-radius: 24px;
-    transform-origin: center;
-    transform: scale(1) translateZ(0);
-    transition: filter 200ms linear, transform 200ms linear;
-    filter: brightness(0.75) saturate(1.2) contrast(0.85);
-  }
-  
-  .card__content{
-    position: absolute;
-    left: 0;
-    top: 0;
-    padding: 24px;
-    
-  }
-  
-  .card__heading{
-    color: #ffffff; /* White text */
-    font-size: 1.9rem;
-    width: 80%;
-    font-weight: normal;
-    margin-top: -5%;
-  }
-  
-  .card__category{
-    position: absolute;
-    align-items: center;
-    align-self: center;
-    align-content: center;
-    box-align: center;
-    top: 14em;
-    color: #ffffff; /* White text */
-    text-shadow: 0px 0px 20px rgb(0, 0, 0);
-    font-size: 26px;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-  
-  .card:hover .card__background{
-    transform: scale(1) translateZ(0);
-    filter: brightness(1.02);
-  }
-  
-  .card-grid:hover > .card:not(:hover), .card__content:not(:hover) .card__background{
-    filter: brightness(0.8) saturate(0) contrast(1.2) blur(10px);
-  }
-  
-  /* Additional styles for footer */
+}
+
+.card__heading{
+  color: #ffffff; /* White text */
+  font-size: 1.9rem;
+  width: 80%;
+  font-weight: normal;
+  margin-top: -5%;
+}
+
+.card__category{
+  position: absolute;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+  box-align: center;
+  top: 14em;
+  color: #ffffff; /* White text */
+  text-shadow: 0px 0px 20px rgb(0, 0, 0);
+  font-size: 26px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.card:hover .card__background{
+  transform: scale(1) translateZ(0);
+  filter: brightness(1.02);
+}
+
+.card-grid:hover > .card:not(:hover), .card__content:not(:hover) .card__background{
+  filter: brightness(0.8) saturate(0) contrast(1.2) blur(10px);
+}
+
+
+/* Additional styles for footer */
 footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  footer a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  footer a:hover {
-    text-decoration: underline;
-  }
-  
-  /* media query for the desktop view port */
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* media query for the desktop view port */
 @media only screen and (min-width: 900px) {
 
-    /* style for the container id */
-    #container {
-      /* width: 80%; */
-      background-color: #ffffff;
-    }
-  
-    /* styles for the ul inside the nav */
-    nav ul {
-      margin: 0;
-      padding-left: 0.5%;
-      padding-right: 0.5%;
-    }
+  /* style for the container id */
+  #container {
+    /* width: 80%; */
+    background-color: #ffffff;
+  }
 
-      /* styles for the li inside the nav */
+  /* styles for the ul inside the nav */
+  nav ul {
+    margin: 0;
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+  }
+
+  /* styles for the li inside the nav */
   nav li {
     /* border-radius: 0;
       border-top: solid #000;
@@ -294,7 +294,7 @@ footer {
     background-color: #ffffff;
   }
 
-    /* paragraphs inside main */
+  /* paragraphs inside main */
   main p {
     padding-left: 0.5em;
     padding-right: 0.5em;
@@ -339,7 +339,36 @@ footer {
     width: 60%;
   }
 
-}  
+
+  /* style for the img inside the figure */
+  figure img {
+    height: 17rem;
+    opacity: 0.7;
+    border-radius: 3rem;
+  }
+
+  /* pseudo class for the imges inside figure */
+  figure img:hover {
+    opacity: 1;
+    /* cursor: pointer; */
+  }
+
+  h1 {
+    color: #000000;
+    text-align: center;
+  }
+
+  /* style for the footer */
+  footer {
+    color: #ffffff;
+    background-color: #520000;
+    margin-top: -0.2em;
+    /* padding: 2em; */
+    overflow: auto;
+  }
+
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+
 
   /* styles regarding section element */
   section {
@@ -378,3 +407,476 @@ footer {
   article p {
     color: #000;
   }
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+
+  /* style for the form */
+  form {
+    background-color: #fff;
+    padding: 1em;
+    margin: 1em;
+  }
+
+  form p {
+    color: #000;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+  }
+
+  /* style for the table  */
+  table {
+    background-color: #fff;
+    width: 80%;
+  }
+
+  /* style for the tabel caption */
+  caption {
+    color: #fff;
+  }
+
+  /* style for the social  */
+  #social img {
+    padding: 0.5em;
+  }
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* media query for the tablet */
+@media only screen and (min-width: 700px) {
+
+  /* styles for li inside nav */
+  nav li {
+    display: inline;
+    float: left;
+    margin-left: 1%;
+    margin-right: 1%;
+    padding-left: 0;
+    padding-right: 0;
+    width: 18%;
+    white-space: nowrap;
+    border-radius: 0;
+    background-color: transparent;
+  }
+
+  /* styles for the main element */
+  main {
+    clear: left;
+    /* margin-top: 4em; */
+    border-radius: 0;
+    margin-top: -0.3em;
+    overflow: auto;
+  }
+
+  /*  hiding mobile class*/
+  .mobile {
+    display: none;
+  }
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+
+  /* display desktop class */
+  .desktop {
+    display: block;
+  }
+
+  /* display equip class img/content */
+  .equip {
+    display: inline;
+    float: left;
+    margin-right: 1.5em;
+  }
+
+  h1 {
+    clear: left;
+    /* text-align: center; */
+  }
+
+  /* style fot the images inside figure */
+  figure img {
+    color: #000;
+    background-color: #ffffff;
+    display: inline;
+    height: 8em;
+    width: calc(100% / 3 - 5%);
+    /* width: 28%; */
+    margin: 1%;
+    padding: 1%;
+  }
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+
+  /* style for the links inside the figure */
+  figure a {
+    background-color: transparent;
+    padding: 0;
+    text-decoration: none;
+  }
+
+  /* display items class */
+  .items {
+    display: block;
+    list-style-position: inside;
+    /* margin-bottom: 6em; */
+  }
+
+  /* display class tablet */
+  .tablet {
+    display: block;
+    margin-top: -3em;
+    margin-bottom: -1em;
+  }
+
+  dt {
+    font-weight: bold;
+    margin-top: 0.7em;
+  }
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+
+  section {
+    padding-bottom: 3em;
+  }
+
+  /* style for the h1 inside the section element */
+  section h1 {
+    text-align: left;
+  }
+
+  /* style regarding links inside the section element */
+  section a {
+    padding: 0;
+    background-color: transparent;
+    color: #1d1d1c;
+    font-weight: normal;
+    text-decoration: underline;
+  }
+
+  /* style for the contact class */
+  .contact {
+    background-color: transparent;
+    color: #1d1d1c;
+    padding: 0;
+    text-decoration: underline;
+    font-weight: normal;
+  }
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+
+  /* style for the article element */
+  article {
+    background-color: #ffffff;
+    float: left;
+    margin: 0.5%;
+    padding: 0.5%;
+    /* width: 31%; */
+    width: calc((100% - 6%) / 3);
+    text-align: left;
+    border-radius: 1em;
+  }
+
+  article h2 {
+    margin-left: 1em;
+  }
+
+  /* style for the images inside the articles in main */
+  article img {
+    border: solid 0.1em #ffffff;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* style for the p inside the articles */
+  article p {
+    margin-top: 2%;
+    padding: 1%;
+  }
+
+  /* style for aside element */
+  aside {
+    background-color: #fff;
+    border-radius: 0 5em 5em 5em;
+    box-shadow: 1em 1em 1em #ffffff;
+    padding: 1.5em;
+    margin: 1em;
+  }
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+
+  fieldset {
+    border: groove;
+    border-radius: 0.5em;
+    box-shadow: 0.3em 0.3em 0.7em rgba(20, 0, 0, 0.54);
+    background-color: #cecece;
+  }
+
+  fieldset legend {
+    visibility: visible;
+  }
+
+  /* style for the label */
+  label {
+    float: left;
+    padding-right: 0.5em;
+    text-align: right;
+    width: 10em;
+  }
+
+  form ul {
+    text-align: left;
+  }
+
+  .gender p {
+    width: 10em;
+    text-align: right;
+  }
+
+  /* style for the btn class */
+  #form-btn:first-of-type {
+    margin-left: 10em;
+  }
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+
+  form p>small {
+    display: inline;
+    padding-left: 1em;
+  }
+
+  .gender {
+    flex-direction: row;
+  }
+
+  .gender>div {
+    flex-direction: row;
+    margin-left: 0;
+  }
+
+  /* style for the table element */
+  table {
+    border: 0.1em solid #ffffff;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    text-align: center;
+  }
+
+  /* style for the th and tr */
+  th,
+  tr,
+  td {
+    border: 0.1em solid #000;
+    padding: 1em;
+  }
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+
+  /* style for th */
+  th {
+    background-color: #ffffff;
+    color: #000000;
+  }
+
+  /* style for the caption of the table */
+  caption {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding-bottom: 0.5em;
+  }
+
+  /* styel for the video class */
+  .video {
+    text-align: center;
+    padding: 1em;
+  }
+
+  video {
+    border: 0.5em ridge #fff;
+    height: auto;
+    max-width: 100%;
+  }
+
+  /* style for the copyright id div */
+  #copyright {
+    float: left;
+    margin-top: 2em;
+    width: 80%;
+  }
+
+  #social {
+    float: right;
+    width: 20%;
+  }
+
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------*/
+
+/* Styles for the registration/login form */
+form {
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+form input[type="email"],
+form input[type="url"],
+form input[type="number"],
+form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+form input[type="radio"] {
+  margin-right: 5px;
+}
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+
+form textarea {
+  resize: vertical;
+}
+
+form button[type="button"],
+form button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #ff0000;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button[type="button"]:hover,
+form button[type="submit"]:hover {
+  background-color: #cc0000;
+}
+
+/* Styles for the progress bar */
+progress {
+  width: 100%;
+  height: 20px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* Additional styles for gender fieldset */
+fieldset.gender {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+fieldset.gender legend {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+fieldset.gender label {
+  margin-right: 10px;
+}
+
+fieldset.gender input[type="radio"] {
+  margin-right: 5px;
+}
+
+/* Additional styles for the confirm checkbox */
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* Clearfix for the container */
+#container::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* style for input, textearea etc */
+input,
+select,
+textarea {
+  display: block;
+  margin-bottom: 1em;
+  border-radius: 0.3em;
+}
+
+/* style for the label */
+label {
+  display: block;
+}
+
+/* styel for the ul inside the form */
+form ul {
+  list-style-type: none;
+}
+
+.chkbx {
+  display: inline-block;
+}
+
+.gender label {
+  text-align: left;
+  color: #000;
+  width: fit-content;
+  padding-right: 1em;
+}
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+
+.gender p {
+  margin: 0;
+  padding-right: 1em;
+}
+
+.gender {
+  display: flex;
+}
+
+fieldset section {
+  padding-bottom: 0;
+}
+
+form {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+form fieldset {
+  padding: 0.5em;
+}
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+
+form p>small {
+  display: block;
+}
+
+#form-btn input {
+  display: inline-block;
+  margin-right: 0.5em;
+  padding: 0.5em 1em;
+  background-color: #ffffff;
+  border-radius: 1em;
+  color: #000000;
+  border: none;
+}
+
+.gender {
+  flex-direction: column;
+}
+
+.gender>div {
+  flex-direction: row;
+  margin-left: 5em;
+}
+/*------------------------------------------------------------------------------------------------------------------------------*/
