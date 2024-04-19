@@ -118,158 +118,158 @@ aside {
   font-style: italic;
 }
 
-
 /* Product card styles */
 .product-card {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 20px;
-    margin: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.product-card h2 {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.product-card button {
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/* Adjustments for responsiveness */
+@media only screen and (max-width: 600px) {
+  .product-card {
+    width: 90%;
+    margin: 10px auto;
   }
+}
+
+.hero-section{
+  align-items: center;
+  display: flex;
+  min-height: 90vh;
+  justify-content: center;
+}
+
+.card-grid{
+  display: inline-flex;
+  grid-column-gap: 40px;
+}
+
+.card{
+  position: relative;
+  opacity: 50%;
+  width: 300px;
+  height: 450px;
+  transition: .2s ease-out;
+  border-radius: 20px;
+  background-image: linear-gradient(15deg, #390000 30%, #ff0000 100%); /* Red to gray gradient */
   
-  .product-card img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
+} 
+
+.card:hover{
+  box-shadow: 2px 30px 30px rgba(0,0,0,0.5);
+  opacity: 100%;
+  transform: scale(1.06) translateZ(0);
+
+}
+
+.card__background{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-size: cover;
+  background-position: center;
+  border-radius: 24px;
+  transform-origin: center;
+  transform: scale(1) translateZ(0);
+  transition: filter 200ms linear, transform 200ms linear;
+  filter: brightness(0.75) saturate(1.2) contrast(0.85);
+}
+
+.card__content{
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 24px;
   
-  .product-card h2 {
-    margin-top: 10px;
-    margin-bottom: 0;
-  }
-  
-  .product-card button {
-    margin-top: 10px;
-    cursor: pointer;
-  }
-  
-  /* Adjustments for responsiveness */
-  @media only screen and (max-width: 600px) {
-    .product-card {
-      width: 90%;
-      margin: 10px auto;
-    }
-  }
-  
-  .hero-section{
-    align-items: center;
-    display: flex;
-    min-height: 90vh;
-    justify-content: center;
-  }
-  
-  .card-grid{
-    display: inline-flex;
-    grid-column-gap: 40px;
-  }
-  
-  .card{
-    position: relative;
-    opacity: 50%;
-    width: 300px;
-    height: 450px;
-    transition: .2s ease-out;
-    border-radius: 20px;
-    background-image: linear-gradient(15deg, #390000 30%, #ff0000 100%); /* Red to gray gradient */
-    
-  } 
-  
-  .card:hover{
-    box-shadow: 2px 30px 30px rgba(0,0,0,0.5);
-    opacity: 100%;
-    transform: scale(1.06) translateZ(0);
-  
-  }
-  
-  .card__background{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: 0;
-    background-size: cover;
-    background-position: center;
-    border-radius: 24px;
-    transform-origin: center;
-    transform: scale(1) translateZ(0);
-    transition: filter 200ms linear, transform 200ms linear;
-    filter: brightness(0.75) saturate(1.2) contrast(0.85);
-  }
-  
-  .card__content{
-    position: absolute;
-    left: 0;
-    top: 0;
-    padding: 24px;
-    
-  }
-  
-  .card__heading{
-    color: #ffffff; /* White text */
-    font-size: 1.9rem;
-    width: 80%;
-    font-weight: normal;
-    margin-top: -5%;
-  }
-  
-  .card__category{
-    position: absolute;
-    align-items: center;
-    align-self: center;
-    align-content: center;
-    box-align: center;
-    top: 14em;
-    color: #ffffff; /* White text */
-    text-shadow: 0px 0px 20px rgb(0, 0, 0);
-    font-size: 26px;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-  
-  .card:hover .card__background{
-    transform: scale(1) translateZ(0);
-    filter: brightness(1.02);
-  }
-  
-  .card-grid:hover > .card:not(:hover), .card__content:not(:hover) .card__background{
-    filter: brightness(0.8) saturate(0) contrast(1.2) blur(10px);
-  }
-  
-  /* Additional styles for footer */
+}
+
+.card__heading{
+  color: #ffffff; /* White text */
+  font-size: 1.9rem;
+  width: 80%;
+  font-weight: normal;
+  margin-top: -5%;
+}
+
+.card__category{
+  position: absolute;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+  box-align: center;
+  top: 14em;
+  color: #ffffff; /* White text */
+  text-shadow: 0px 0px 20px rgb(0, 0, 0);
+  font-size: 26px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.card:hover .card__background{
+  transform: scale(1) translateZ(0);
+  filter: brightness(1.02);
+}
+
+.card-grid:hover > .card:not(:hover), .card__content:not(:hover) .card__background{
+  filter: brightness(0.8) saturate(0) contrast(1.2) blur(10px);
+}
+
+
+/* Additional styles for footer */
 footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  footer a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  footer a:hover {
-    text-decoration: underline;
-  }
-  
-  /* media query for the desktop view port */
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* media query for the desktop view port */
 @media only screen and (min-width: 900px) {
 
-    /* style for the container id */
-    #container {
-      /* width: 80%; */
-      background-color: #ffffff;
-    }
-  
-    /* styles for the ul inside the nav */
-    nav ul {
-      margin: 0;
-      padding-left: 0.5%;
-      padding-right: 0.5%;
-    }
+  /* style for the container id */
+  #container {
+    /* width: 80%; */
+    background-color: #ffffff;
+  }
 
-      /* styles for the li inside the nav */
+  /* styles for the ul inside the nav */
+  nav ul {
+    margin: 0;
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+  }
+
+  /* styles for the li inside the nav */
   nav li {
     /* border-radius: 0;
       border-top: solid #000;
@@ -294,7 +294,7 @@ footer {
     background-color: #ffffff;
   }
 
-    /* paragraphs inside main */
+  /* paragraphs inside main */
   main p {
     padding-left: 0.5em;
     padding-right: 0.5em;
@@ -339,7 +339,108 @@ footer {
     width: 60%;
   }
 
-}  
+
+  /* style for the img inside the figure */
+  figure img {
+    height: 17rem;
+    opacity: 0.7;
+    border-radius: 3rem;
+  }
+
+  /* pseudo class for the imges inside figure */
+  figure img:hover {
+    opacity: 1;
+    /* cursor: pointer; */
+  }
+
+  h1 {
+    color: #000000;
+    text-align: center;
+  }
+
+  /* style for the footer */
+  footer {
+    color: #ffffff;
+    background-color: #520000;
+    margin-top: -0.2em;
+    /* padding: 2em; */
+    overflow: auto;
+  }
+
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+  /* styles regarding section element */
+  section {
+    color: #000000;
+    margin-left: 1em;
+    padding-bottom: 5em;
+    margin-top: 2em;
+  }
+
+  section:first-of-type {
+    margin-top: 0;
+  }
+
+  section a {
+    color: #000000;
+  }
+
+  section p {
+    margin-left: 0;
+  }
+
+  main h2 {
+    color: #000000;
+  }
+
+  .contact {
+    color: #000000;
+  }
+
+  /* style for the h2 inside the article */
+  main article h2 {
+    color: #000;
+    text-align: center;
+  }
+
+  article p {
+    color: #000;
+  }
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+
+  /* style for the form */
+  form {
+    background-color: #fff;
+    padding: 1em;
+    margin: 1em;
+  }
+
+  form p {
+    color: #000;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+  }
+
+  /* style for the table  */
+  table {
+    background-color: #fff;
+    width: 80%;
+  }
+
+  /* style for the tabel caption */
+  caption {
+    color: #fff;
+  }
+
+  /* style for the social  */
+  #social img {
+    padding: 0.5em;
+  }
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------*/
 
 /* media query for the tablet */
 @media only screen and (min-width: 700px) {
@@ -602,3 +703,180 @@ footer {
   }
 
 }
+
+/*------------------------------------------------------------------------------------------------------------------------------*/
+
+/* Styles for the registration/login form */
+form {
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+form input[type="email"],
+form input[type="url"],
+form input[type="number"],
+form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+form input[type="radio"] {
+  margin-right: 5px;
+}
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+
+form textarea {
+  resize: vertical;
+}
+
+form button[type="button"],
+form button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #ff0000;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button[type="button"]:hover,
+form button[type="submit"]:hover {
+  background-color: #cc0000;
+}
+
+/* Styles for the progress bar */
+progress {
+  width: 100%;
+  height: 20px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* Additional styles for gender fieldset */
+fieldset.gender {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+fieldset.gender legend {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+fieldset.gender label {
+  margin-right: 10px;
+}
+
+fieldset.gender input[type="radio"] {
+  margin-right: 5px;
+}
+
+/* Additional styles for the confirm checkbox */
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* Clearfix for the container */
+#container::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* style for input, textearea etc */
+input,
+select,
+textarea {
+  display: block;
+  margin-bottom: 1em;
+  border-radius: 0.3em;
+}
+
+/* style for the label */
+label {
+  display: block;
+}
+
+/* styel for the ul inside the form */
+form ul {
+  list-style-type: none;
+}
+
+.chkbx {
+  display: inline-block;
+}
+
+.gender label {
+  text-align: left;
+  color: #000;
+  width: fit-content;
+  padding-right: 1em;
+}
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+
+.gender p {
+  margin: 0;
+  padding-right: 1em;
+}
+
+.gender {
+  display: flex;
+}
+
+fieldset section {
+  padding-bottom: 0;
+}
+
+form {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+form fieldset {
+  padding: 0.5em;
+}
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+
+form p>small {
+  display: block;
+}
+
+#form-btn input {
+  display: inline-block;
+  margin-right: 0.5em;
+  padding: 0.5em 1em;
+  background-color: #ffffff;
+  border-radius: 1em;
+  color: #000000;
+  border: none;
+}
+
+.gender {
+  flex-direction: column;
+}
+
+.gender>div {
+  flex-direction: row;
+  margin-left: 5em;
+}
+/*------------------------------------------------------------------------------------------------------------------------------*/
