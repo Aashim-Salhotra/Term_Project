@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/styles.css">
-  <title>Infinity Games</title>
+  <title>Infinity Games - Games</title>
 </head>
 <body>
 
@@ -18,12 +18,13 @@
     use this area to add links to other pages-->
     <nav>
       <ul>
+        <li><a href="login.html">Log In</a></li>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="games.html">Games</a></li>
         <li><a href="products.html">Products</a></li>
+        <li><a href="favorites.html">Favorites</a></li>
         <li><a href="contact.html">Contact Us</a></li>
-        <li><a href="login.html">Log In</a></li>
 
       </ul>
     </nav>
@@ -44,61 +45,85 @@
   
         <div class="card-grid">
         <a class="card" href="#">
-            <div class="card__background" style="background-image: url(images/spider_man.png)"></div>
-            <div class="card__content">
-            <h3 class="card__heading">Spider-Man</h3>
-            <p class="card__category">$79.99</p>
-        </div>
+            <div class="card">
+                <div class="card__background" style="background-image: url(images/spider_man.png)"></div>
+                <div class="card__content">
+                  <h3 class="card__heading">Spider-Man</h3>
+                  <p class="card__category">$79.99</p>
+                  <button onclick="addToFavorites('Spider-Man')" >Add to Favorites</button>
+                </div>
+              </div>
         </a>
         <a class="card" href="#">
-            <div class="card__background" style="background-image: url(images/GTA.png)"></div>
-            <div class="card__content">
-            <h3 class="card__heading">GTA V</h3>
-            <p class="card__category">$40.99</p>
-            </div>
+            <div class="card">
+                <div class="card__background" style="background-image: url(images/GTA.png)"></div>
+                <div class="card__content">
+                  <h3 class="card__heading">GTA V</h3>
+                  <p class="card__category">$40.99</p>
+                  <button onclick="addToFavorites('GTA V')">Add to Favorites</button>
+                </div>
+              </div>
         </a>
         <a class="card" href="#">
-            <div class="card__background" style="background-image: url(images/RDR_2.png)"></div>
-            <div class="card__content">
-            <h3 class="card__heading">RDR 2</h3>
-            <p class="card__category">$69.99</p>
-            </div>
+            <div class="card">
+                <div class="card__background" style="background-image: url(images/RDR_2.png)"></div>
+                <div class="card__content">
+                  <h3 class="card__heading">RDR 2</h3>
+                  <p class="card__category">$69.99</p>
+                  <button onclick="addToFavorites('RDR 2')">Add to Favorites</button>
+                </div>
+              </div>
         <a class="card" href="#">
-            <div class="card__background" style="background-image: url(images/FORZA.png)"></div>
-            <div class="card__content">
-            <h3 class="card__heading">Forza Deluxe Suite</h3>
-            <p class="card__category">$120.99</p>
-            </div>
+            <div class="card">
+                <div class="card__background" style="background-image: url(images/FORZA.png)"></div>
+                <div class="card__content">
+                  <h3 class="card__heading">Forza Deluxe Suite</h3>
+                  <p class="card__category">$120.99</p>
+                  <button onclick="addToFavorites('Forza Deluxe Suite')">Add to Favorites</button>
+                </div>
+              </div>
         </a>   
     </section>
     <section class="hero-section">
   
         <div class="card-grid">
         <a class="card" href="#">
-            <div class="card__background" style="background-image: url(images/MALEVOLENT_PASS.jpg)"></div>
-            <div class="card__content">
-            <h3 class="card__heading">Malevolent Shrine - Game Pass</h3>
-            <p class="card__category">$199.99</p>
-            </div>
-            <a class="card" href="#">
+            <div class="card">
+                <div class="card__background" style="background-image: url(images/MALEVOLENT_PASS.jpg)"></div>
+                <div class="card__content">
+                  <h3 class="card__heading">Malevolent Shrine - Game Pass</h3>
+                  <p class="card__category">$199.99</p>
+                  <button onclick="addToFavorites('Malevolent Shrine - Game Pass')">Add to Favorites</button>
+                </div>
+              </div>
+        <a class="card" href="#">
+            <div class="card">
                 <div class="card__background" style="background-image: url(images/INFINITE_PASS.webp)"></div>
                 <div class="card__content">
-                <h3 class="card__heading">Infinite Void - Game Pass</h3>
-                <p class="card__category">$259.95</p>
+                  <h3 class="card__heading">Infinite Void - Game Pass</h3>
+                  <p class="card__category">$259.95</p>
+                  <button onclick="addToFavorites('Infinite Void - Game Pass')">Add to Favorites</button>
                 </div>
+              </div>
         </a>
         <a class="card" href="#">
-            <div class="card__background" style="background-image: url(images/warzone.jpg)"></div>
-            <div class="card__content">
-            <h3 class="card__heading">COD Modern Warfare III - SALE!!!</h3>
-            <p class="card__category">$89.99</p>
-            </div>
+            <div class="card">
+                <div class="card__background" style="background-image: url(images/warzone.jpg)"></div>
+                <div class="card__content">
+                  <h3 class="card__heading">COD Modern Warfare III - SALE!!!</h3>
+                  <p class="card__category">$89.99</p>
+                  <button onclick="addToFavorites('COD Modern Warfare III - SALE!!!')">Add to Favorites</button>
+                </div>
+              </div>
         <a class="card" href="#">
-            <div class="card__background" style="background-image: url(images/GOW.jpg)"></div>
-            <div class="card__content">
-            <h3 class="card__heading">GOW - ALL PARTS</h3>
-            <p class="card__category">$170.99</p>
-            </div>
+            <div class="card">
+                <div class="card__background" style="background-image: url(images/GOW.jpg)"></div>
+                <div class="card__content">
+                  <h3 class="card__heading">GOW - ALL PARTS</h3>
+                  <p class="card__category">$170.99</p>
+                  <button onclick="addToFavorites('GOW - ALL PARTS')">Add to Favorites</button>
+                </div>
+              </div>
         </a>   
     </section>
   
@@ -117,22 +142,44 @@
     </div>
 </footer>
 </div>
-      <script>
-  // JavaScript for products page
+      <!-- JavaScript -->
+<script>
 
-  // Function to display a message when a product is clicked
-  function productClicked(productName) {
-    alert("You clicked on " + productName);
-  }
+    function productClicked(productName) {
+        alert("You clicked on " + productName);
+      }
+      
+      // Add event listeners to each product card
+      document.querySelectorAll('.card').forEach(item => {
+        item.addEventListener('click', function() {
+          // Extract product name from the card content
+          const productName = this.querySelector('.card__heading').textContent;
+          productClicked(productName);
+        });
+      }); 
+
+    // Function to add a game to favorites
+    function addToFavorites(gameName) {
+      // Check if localStorage is supported
+      if (typeof(Storage) !== "undefined") {
+        // Retrieve existing favorites or initialize an empty array
+        let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+        // Add the selected game to favorites if it's not already there
+        if (!favorites.includes(gameName)) {
+          favorites.push(gameName);
+          localStorage.setItem("favorites", JSON.stringify(favorites));
+          alert(gameName + " has been added to favorites!");
+        } else {
+          alert(gameName + " is already in favorites!");
+        }
+        // Redirect to favorites.html
+        window.location.href = "favorites.html";
+      } else {
+        alert("Sorry, your browser does not support local storage.");
+      }
+    }
+  </script>
   
-  // Add event listeners to each product card
-  document.querySelectorAll('.card').forEach(item => {
-    item.addEventListener('click', function() {
-      // Extract product name from the card content
-      const productName = this.querySelector('.card__heading').textContent;
-      productClicked(productName);
-    });
-  }); </script>
 
 </body>
 </html>

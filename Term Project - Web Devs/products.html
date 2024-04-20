@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/styles.css">
-  <title>Infinity Games</title>
+  <title>Infinity Games - Products</title>
 </head>
 <body>
 
@@ -18,12 +18,13 @@
     use this area to add links to other pages-->
     <nav> 
       <ul>
+        <li><a href="login.html">Log In</a></li>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="games.html">Games</a></li>
         <li><a href="products.html">Products</a></li>
+        <li><a href="favorites.html">Favorites</a></li>
         <li><a href="contact.html">Contact Us</a></li>
-        <li><a href="login.html">Log In</a></li>
 
       </ul>
     </nav>
@@ -42,6 +43,8 @@
             <div class="card__content">
               <h3 class="card__heading">PS5 Dual-Sense Controller (SE)</h3>
               <p class="card__category">$89.95</p>
+              <button onclick="addToFavorites('PS5 Dual-Sense Controller (SE)')" >Add to Favorites</button>
+
             </div>
           </a>
           <a class="card" href="#">
@@ -49,6 +52,8 @@
             <div class="card__content">
               <h3 class="card__heading">Shrine Heads</h3>
               <p class="card__category">$199.95</p>
+              <button onclick="addToFavorites('Shrine Heads')" >Add to Favorites</button>
+
             </div>
           </a>
           <a class="card" href="#">
@@ -56,12 +61,16 @@
             <div class="card__content">
               <h3 class="card__heading">Void Heads</h3>
               <p class="card__category">$199.95</p>
+              <button onclick="addToFavorites('Void Heads')" >Add to Favorites</button>
+
             </div>
             <a class="card" href="#">
                 <div class="card__background" style="background-image: url(images/Xbox_Controller.png)"></div>
                 <div class="card__content">
                   <h3 class="card__heading">Xbox X Controller (VE)</h3>
                   <p class="card__category">$89.95</p>
+                  <button onclick="addToFavorites('Xbox X Controller (VE)')" >Add to Favorites</button>
+
                 </div>
               </a>   
       </section>
@@ -96,6 +105,29 @@
       const productName = this.querySelector('.card__heading').textContent;
       productClicked(productName);
     });
-  }); </script>
+  }); 
+    // Function to add a game to favorites
+    function addToFavorites(gameName) {
+      // Check if localStorage is supported
+      if (typeof(Storage) !== "undefined") {
+        // Retrieve existing favorites or initialize an empty array
+        let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+        // Add the selected game to favorites if it's not already there
+        if (!favorites.includes(gameName)) {
+          favorites.push(gameName);
+          localStorage.setItem("favorites", JSON.stringify(favorites));
+          alert(gameName + " has been added to favorites!");
+        } else {
+          alert(gameName + " is already in favorites!");
+        }
+        // Redirect to favorites.html
+        window.location.href = "favorites.html";
+      } else {
+        alert("Sorry, your browser does not support local storage.");
+      }
+    }
+
+
+</script>
 </body>
 </html>

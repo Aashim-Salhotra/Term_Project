@@ -1,140 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>INFINITY GAMES LOGIN</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
-<style>
-  body{
-  margin:0;
-  height:100vh;
-  width:100vw;
-  overflow:hidden;
-  display:flex;
-  align-items:center;
-  color:#fc0303;
-  background-color:#fff;
-  justify-content:center;
-  background-image: url(https://images.wallpapersden.com/image/download/gojo-satoru-cool-jujutsu-kaisen_bmZramWUmZqaraWkpJRobWllrWdmamg.jpg);
-  background-size: cover;
-}
-.main{
-  width: 30em;
-  height:50em;
-  padding:60px 35px 35px 35px;
-  border-radius:20px;
-  background-color:#fff;
-  font-family:sans-serif;
-  font-weight:700;
-}
-.logo{
-  background-image:url("images/Logo.png");
-  background-repeat: no-repeat;
-  width:100%;
-  height:14em;
-  margin:-60px 4.5em;
-}
 
-.title{
-  text-align:center;
-  font-size:28px;
-  color:#3b0000;
-  letter-spacing:.5px;
-  margin:35px;
-}
-.credentials{
-  width:100%;
-  padding:2px 5px 0px 5px;
-}
-.credentials input{
-  border:none;
-  outline:none;
-  background:none;
-  font-size:18px;
-  color:#1a0000;
-  padding:20px 10px 20px 5px;
-  letter-spacing: 1px;
-}
-.username{
-  margin-bottom:20px;
-  border-bottom:2px solid #c8b5b5;
-  transition:.5s ease;
-}
-.username:hover{
-  border-bottom:3px solid #fc0303;
-}
-.password{
-  margin-bottom:30px;
-  border-bottom:2px solid #c2c4c3;
-  transition:.5s ease;
-}
-.password:hover{
-  border-bottom:3px solid #fc0303;
-}
-.submit{
-  outline:none;
-  border:none;
-  width:100%;
-  height:60px;
-  border-radius:30px;
-  color:#fff;
-  font-size:20px;
-  font-weight:700;
-  text-align:center;
-  background-image:linear-gradient(to right, #560000, #ff0000);
-  background-size:200%;
-  box-shadow: 3px 3px 8px #b1b1b1,
-        -3px -3px 8px #fff;
-  transition:.5s;
-}
-.submit:hover{
-  background-position:right;
-}
-.link{
-  margin:10px;
-  text-align:center;
-}
-.link a{
-  color :#aaa;
-  font-size:15px;
-  text-decoration:none;
-}
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    color: #fc0303;
+    background-color: #fff;
+    justify-content: center;
+    background-image: url(https://images.wallpapersden.com/image/download/gojo-satoru-cool-jujutsu-kaisen_bmZramWUmZqaraWkpJRobWllrWdmamg.jpg);
+    background-size: cover;
+  }
+
+  .main {
+    width: 30em;
+    height: auto;
+    padding: 60px 35px 35px 35px;
+    border-radius: 20px;
+    background-color: #fff;
+    font-family: sans-serif;
+    font-weight: 700;
+  }
+
+  .logo {
+    background-image: url("images/Logo.png");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 14em;
+    margin: -60px 4.5em;
+  }
+
+  .title {
+    text-align: center;
+    font-size: 28px;
+    color: #3b0000;
+    letter-spacing: .5px;
+    margin: 35px;
+  }
+
+  .credentials {
+    width: 100%;
+    padding: 2px 5px 0px 5px;
+  }
+
+  .credentials input {
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 18px;
+    color: #1a0000;
+    padding: 20px 10px 20px 5px;
+    letter-spacing: 1px;
+  }
+
+  .username {
+    margin-bottom: 20px;
+    border-bottom: 2px solid #c8b5b5;
+    transition: .5s ease;
+  }
+
+  .username:hover {
+    border-bottom: 3px solid #fc0303;
+  }
+
+  .password {
+    margin-bottom: 30px;
+    border-bottom: 2px solid #c2c4c3;
+    transition: .5s ease;
+  }
+
+  .password:hover {
+    border-bottom: 3px solid #fc0303;
+  }
+
+  .submit {
+    outline: none;
+    border: none;
+    width: 100%;
+    height: 60px;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    background-image: linear-gradient(to right, #560000, #ff0000);
+    background-size: 200%;
+    box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #fff;
+    transition: .5s;
+  }
+
+  .submit:hover {
+    background-position: right;
+  }
+
+  .link {
+    margin: 10px;
+    text-align: center;
+  }
+
+  .link a {
+    color: #aaa;
+    font-size: 15px;
+    text-decoration: none;
+  }
+
+  /* New styles for registration form */
+
+  .registration-form {
+    display: none;
+    padding-top: 20px;
+  }
+
+  .progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+
+  .progress {
+    width: 0;
+    height: 100%;
+    background-color: #4caf50;
+    border-radius: 10px;
+  }
 </style>
+
 <body>
 
-<div class="main">
-  <div class="logo"></div>
-  <br>
-  <div class="title">INFINITY GAMES</div>
-  <form id="loginForm" action="index.html">
-  <div class="credentials">
-    <div class="username">
-      <span class="glyphicon glyphicon-user"></span>
-      <input type="text" id="username" name="username" placeholder="Username" required="" >
-    </div>
-    <div class="password">
-      <span class="glyphicon glyphicon-lock"></span>
-      <input type="password" id="password" name="password" placeholder="Password" required="">
-    </div>
-  </div>
-  <button type="submit" class="submit" onclick="submitForm()">Submit</button>
-  </form>
-  <div class = "link">
-    <a href="#" >Forget Password? </a> &nbsp <a href="#" > Sign up </a>
-  </div>
-</div>
+  <div class="main">
+    <div class="logo"></div>
+    <br>
+    <div class="title">INFINITY GAMES</div>
+    <form id="loginForm" class="login-form" action="index.html">
+      <div class="credentials">
+        <div class="username">
+          <span class="glyphicon glyphicon-user"></span>
+          <input type="text" id="username" name="username" placeholder="Username" required="">
+        </div>
+        <div class="password">
+          <span class="glyphicon glyphicon-lock"></span>
+          <input type="password" id="password" name="password" placeholder="Password" required="">
+        </div>
+      </div>
+      <button type="submit" class="submit" onclick="submitLoginForm()">Submit</button>
+    </form>
 
-<script>
-function submitForm() {
-  var username = document.getElementById("username").value;
-  var password = document.getElementById("password").value;
-  alert("Username: " + username + "\nPassword: " + password);
-}
-</script>
+    <form id="registrationForm" class="registration-form" action="index.html">
+      <div class="progress-bar">
+        <div class="progress" id="progress"></div>
+      </div>
+      <div class="credentials">
+        <div class="email">
+          <input type="email" id="email" name="email" placeholder="Email Address" required="">
+        </div>
+        <div class="personal-url">
+          <input type="url" id="url" name="url" placeholder="Personal URL" required="">
+        </div>
+        <div class="year-of-birth">
+          <input type="date" id="year" name="year" placeholder="Year of Birth" min="1900-01-01" max="2024-12-31" required="">
+        </div>                
+        <div class="gender">
+          <label><input type="radio" name="gender" value="male"> Male</label>
+          <label><input type="radio" name="gender" value="female"> Female</label>
+        </div>
+        <div class="comments">
+          <textarea id="comments" name="comments" placeholder="Comments" rows="4" required=""></textarea>
+        </div>
+        <div class="confirm-checkbox">
+          <label><input type="checkbox" id="confirm" name="confirm" required=""> I confirm that the data entered are not fictitious</label>
+        </div>
+      </div>
+      <button type="submit" class="submit" onclick="submitRegistrationForm()">Submit</button>
+    </form>
+
+    <div class="link">
+      <a href="#" onclick="toggleForm()">Forget Password? </a> &nbsp <a href="#" onclick="toggleForm()"> Sign up </a>
+    </div>
+  </div>
+
+  <script>
+    function submitLoginForm() {
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+      alert("Username: " + username + "\nPassword: " + password);
+    }
+
+    function toggleForm() {
+      var loginForm = document.getElementById("loginForm");
+      var registrationForm = document.getElementById("registrationForm");
+
+      if (loginForm.style.display === "block") {
+        loginForm.style.display = "none";
+        registrationForm.style.display = "block";
+      } else {
+        loginForm.style.display = "block";
+        registrationForm.style.display = "none";
+      }
+    }
+
+    function submitRegistrationForm() {
+      // Add your registration form submission logic here
+    }
+  </script>
 
 </body>
+
 </html>
