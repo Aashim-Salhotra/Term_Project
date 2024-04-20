@@ -1,0 +1,118 @@
+<!--Web Devs - Group Term Project-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Infinity Games - Favorites</title>
+</head>
+<body>
+
+  <div id="container">
+    <!-- Header section -->
+    <header>
+      <a href="index.html"><img src="images/Logo.png" alt="Infinity Games Logo"></a>
+    </header>
+
+    <!-- Navigation section -->
+    <nav> 
+      <ul>
+        <li><a href="login.html">Log In</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="games.html">Games</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="favorites.html">Favorites</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <h1>Favorites</h1> <br>
+
+    <!-- Main content section -->
+    <main class="flex-container">
+      <section class="hero-section">
+        <!-- Favorites grid -->
+        <div class="card-grid" id="favorites-grid">
+          <!-- Favorites will be dynamically added here -->
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer section -->
+    <footer>
+      <div id="copyright">
+        <p>&copy; Copyright 2024. All Rights Reserved. 
+          Aashim, Apil, Jagraj, Nishant, Sujal</p>
+      </div>
+      <div id="social">
+        <p>Connect with us on</p>
+        <p><a href=""><img src="images/fblogo.png" alt="facebook logo"></a></p>
+        <p><a href=""><img src="images/twitterlogo.png" alt="twitter logo"></a></p>
+      </div>
+    </footer>
+  </div>
+
+ <!-- JavaScript -->
+<script>
+    // Function to retrieve favorites from local storage and display them
+    function displayFavorites() {
+      // Check if localStorage is supported
+      if (typeof(Storage) !== "undefined") {
+        // Retrieve favorites from local storage
+        let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+        // Select the favorites grid element
+        const favoritesGrid = document.getElementById("favorites-grid");
+        // Clear any existing content
+        favoritesGrid.innerHTML = "";
+        // Iterate over each favorite and create HTML for it
+        favorites.forEach(favorite => {
+          const card = document.createElement("div");
+          card.className = "card";
+          card.innerHTML = `
+            <div class="card__background" style="background-image: url(images/${favorite.replace(/\s+/g, '_')}.png)"></div>
+            <div class="card__content">
+              <h3 class="card__heading">${favorite}</h3>
+              <button class="remove-btn">Remove</button>
+            </div>
+          `;
+  
+          // Append the favorite card to the favorites grid
+          favoritesGrid.appendChild(card);
+        });
+  
+        // Add event listeners to remove buttons
+        favoritesGrid.querySelectorAll('.remove-btn').forEach(btn => {
+          btn.addEventListener('click', function() {
+            removeFavorite(this.parentNode.querySelector('.card__heading').textContent);
+            displayFavorites(); // Refresh the favorites grid after removal
+          });
+        });
+      } else {
+        alert("Sorry, your browser does not support local storage.");
+      }
+    }
+  
+    // Function to remove a favorite game
+    function removeFavorite(gameName) {
+      // Check if localStorage is supported
+      if (typeof(Storage) !== "undefined") {
+        // Retrieve favorites from local storage
+        let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+        // Remove the game from favorites array
+        favorites = favorites.filter(favorite => favorite !== gameName);
+        // Update favorites in local storage
+        localStorage.setItem("favorites", JSON.stringify(favorites));
+      } else {
+        alert("Sorry, your browser does not support local storage.");
+      }
+    }
+  
+    // Call displayFavorites when the page loads
+    window.addEventListener("load", displayFavorites);
+  </script>
+  
+
+</body>
+</html>
